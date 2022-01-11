@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blank field Alert</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("button").click(function(){
+  	
+  	if($('#fname').val() ==  '')
+  		{alert('Please Enter First Name');}
+
+   	if($('#lname').val()=='')
+  		{alert('Please Enter Last Name');}
+  });
+});
+</script>
+</head>
+
+<body>
+
+		First Name:<br>
+		<input type="text" name="fname" id="fname"><br>
+		Last Name:<br>
+		<input type="text" name="lname" id="lname"><br><br>
+		<button>Submit</button>
+
+</body>
+</html>
+
+

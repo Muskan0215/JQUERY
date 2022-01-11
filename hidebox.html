@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hide box</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style type="text/css">
+	#box{
+		background-color: red;
+		height: 70px;
+		width: 70px;
+	}
+
+	p{
+		font-size: 20px;
+		color: black;
+	}
+</style>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#box").hide();
+  });
+});
+</script>
+</head>
+
+<body>
+
+<div id="box"></div>
+
+<p>Hide the red box on button click</p>
+<button>Click me</button>
+
+</body>
+</html>
+
+

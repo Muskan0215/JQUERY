@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>POP UP</title>
+
+<style>
+	div{
+	 	box-sizing: border-box;
+	 	}
+
+	 h4{
+	 	color: white;
+	 	margin: 0px;
+	 	vertical-align: middle;
+	 	line-height: normal;
+	 	display: inline-block;
+	 }
+
+	 .box{
+	 	background-color: white;
+	 	padding: 20px;	
+	 	border-style: solid;
+	 	border-width: 1px;
+	 	width: 1040px;
+	 	height: 356px;
+	 	text-align: center;
+	 	position: absolute;
+	 	margin: auto;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 }
+
+
+
+.box1{
+	width: 1000px;
+	height: 50px;
+	background-color: turquoise;
+	margin-bottom: 8px;
+	line-height: 50px;
+}
+
+.float_box{
+	width: 1000px;
+	height: 200px;
+}
+
+.box2{
+	float: left;
+	width: 245px;
+	height: 200px;
+	background-color: limegreen;
+	opacity: 0.6;
+}
+
+.box3{
+	float: right;
+	width: 750px;
+	height: 142px;
+	background-color: gold;
+	margin-bottom: 8px;
+}
+
+.box4{
+	float: right;
+	width: 750px;
+	height: 50px;
+	background-color: grey;
+	line-height: 50px;
+	
+}
+
+.float_box::after{
+	content: "";
+  clear: both;
+  display: table;
+}
+
+.box5{
+	margin-top: 8px;
+	width: 1000px;
+	height: 50px;
+	background-color: orange;
+	line-height: 50px;
+}
+.popup{
+	background-color: black;
+	width: 1000px;
+	opacity: 0.7;
+	height: 315px;
+	display: none;
+	line-height: 315px;
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+}
+
+.close{
+	float: right;
+	display: block;
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+  $('#footer').click(function(){
+  	$('.popup').show();
+  });
+
+  $('.close').click(function(){
+  	$('.popup').hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="box">
+
+	<div class="popup">
+		<button class="close">&times;</button>
+		<h1 style="color: white;">I am a Popup</h1>
+	</div>
+
+
+	<div class="box1">
+
+		<h4>Header</h4>
+
+	</div>
+	<div class="float_box">
+
+		<div class="box2">
+			<h4>Sidebar</h4>
+
+		</div>
+
+		<div class="box3">
+			<h4>Main Content</h4>
+
+		</div>
+
+		<div class="box4">
+			<h4>Extra Content</h4>
+		</div>
+
+	</div>
+
+	<div class="box5">
+		<h4 id="footer">Footer</h4>
+
+	</div>
+
+
+</div>
+</body>
+</html>

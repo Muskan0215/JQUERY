@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slide down Panel</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style type="text/css">
+	
+
+	.hidden{
+		background-color: lightblue;
+		display: none;
+		text-align: center;
+		width: 50%;
+		height: 100px;
+		line-height: 100px;
+	}
+
+	p{
+		font-size: 20px;
+		line-height: normal;
+		vertical-align: middle;
+		display: inline-block;
+	}
+</style>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".hidden").slideDown();
+  });
+});
+</script>
+</head>
+
+<body>
+	
+		<button style="width: 50%;">Click here to slide down panel</button>
+	
+
+	<div class="hidden">
+		<p>Hello World!</p>
+	</div>
+</body>
+</html>
+
+
